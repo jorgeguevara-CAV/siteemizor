@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { receiptDb } from '@/lib/receipt-db';
 import { notice } from '@/lib/notice';
 export const dynamic='force-dynamic';
-const schema=z.object({requestId:z.string().uuid(),company:z.string().trim().min(2).max(180),nit:z.string().regex(/^\d{5,20}$/),name:z.string().trim().min(3).max(160),email:z.string().trim().email().max(180).transform(v=>v.toLowerCase()),consent:z.literal(true),version:z.literal(notice.version)}).strict();
+const schema=z.object({requestId:z.string().uuid(),company:z.string().trim().min(2).max(180),nit:z.string().trim().regex(/^(?:\d{5,20})?$/).optional().default(''),name:z.string().trim().min(3).max(160),email:z.string().trim().email().max(180).transform(v=>v.toLowerCase()),consent:z.literal(true),version:z.literal(notice.version)}).strict();
 const json=(data:unknown,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'no-store'}});
 export async function POST(request:Request){
  if(request.headers.get('origin')!==new URL(request.url).origin)return json({error:'Solicitud no permitida.'},403);
