@@ -1,9 +1,9 @@
-import { ArrowDown, ArrowUpRight, ShieldCheck } from "lucide-react";
+import { ArrowDown, ArrowUpRight, ArrowLeft, ShieldCheck } from "lucide-react";
 import { ReceiptForm } from "./receipt-form";
 import { notice } from "@/lib/notice";
 export default function Home() {
   return <>
-    <header className="header"><a className="wordmark" href="#inicio" aria-label="EMIZOR, inicio"><img src="/emizor-logo-hd.png" alt="EMIZOR — expertos en facturación" width="2170" height="725"/></a><nav aria-label="Navegación principal"><a href="#etapas">Etapas</a><a href="#comunicado">Para tu empresa</a><a href="#normativa">Marco normativo</a><a className="nav-confirm" href="#recepcion">Recibir novedades <ArrowUpRight size={16}/></a></nav></header>
+    <header className="header header-compact"><a className="wordmark" href="https://emizor.com/" aria-label="Ir al sitio principal de EMIZOR"><img src="/emizor-logo-hd.png" alt="EMIZOR — expertos en facturación" width="2170" height="725"/></a><a className="back-to-emizor" href="https://emizor.com/"><ArrowLeft size={16} aria-hidden="true"/> Volver a EMIZOR</a></header>
     <main id="inicio">
       <section className="hero"><div className="hero-inner"><div className="eyebrow">INFORMACIÓN PARA NUESTROS CLIENTES <span>LEY N.º 1733</span></div><div className="hero-grid"><div><h1>Estamos adecuando nuestra facturación<br/><em>a la Ley 1733.</em></h1><p className="hero-copy">Trabajamos en los ajustes de nuestro sistema conforme a los lineamientos del SIN. Aquí puedes conocer el estado del proceso y registrarte para recibir novedades.</p><a className="hero-link" href="#recepcion">Recibir novedades <ArrowUpRight size={18}/></a><a className="hero-secondary" href="#etapas">Ver etapas <ArrowDown size={16}/></a></div><aside className="status-card"><ShieldCheck size={34} strokeWidth={1.5}/><p className="small-title">ESTADO DE EMIZOR</p><h2>Adecuación<br/>en curso</h2><p>Nuestro compromiso es acompañarte con información clara durante la transición.</p><div className="status-foot">Actualización<br/><strong>15 de septiembre de 2026</strong></div></aside></div></div></section>
       <div className="meta-bar"><span>COMUNICADO A CLIENTES</span><span>15 SEP 2026 <span className="meta-divider">/</span> VERSIÓN 1.1</span></div>
