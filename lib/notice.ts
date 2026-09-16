@@ -1,5 +1,5 @@
 export const notice = {
-  version: "EMIZOR-1733-2026-09-15-v1.3",
+  version: "EMIZOR-1733-2026-09-16-v1.4",
   title: "EMIZOR está trabajando en la adecuación a la Ley N.º 1733",
   paragraphs: [
     "En EMIZOR estamos trabajando en la adecuación de nuestro sistema de facturación a los cambios de la Ley N.º 1733 y a las especificaciones técnicas del Servicio de Impuestos Nacionales.",

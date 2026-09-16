@@ -9,7 +9,6 @@ import {
   MapPin,
   Newspaper,
   Phone,
-  ShieldCheck,
   UserRoundCheck,
 } from "lucide-react";
 import { ReceiptForm } from "./receipt-form";
@@ -49,12 +48,11 @@ export default function Home() {
                   <a className="hero-secondary" href="#recepcion">Recibir actualizaciones <ArrowUpRight size={16} /></a>
                 </div>
               </div>
-              <aside className="status-card" aria-label="Estado actual de la adecuación">
-                <ShieldCheck size={34} strokeWidth={1.5} />
-                <p className="small-title">ESTADO DE EMIZOR</p>
-                <h2>Adecuación<br />en curso</h2>
-                <p>Nuestro compromiso es acompañarte con información clara durante la transición.</p>
-                <div className="status-foot">Última actualización<br /><strong>15 de septiembre de 2026</strong></div>
+              <aside className="status-card official-calendar" aria-label="Calendario oficial del Servicio de Impuestos Nacionales">
+                <p className="small-title">CALENDARIO OFICIAL DEL SIN</p>
+                <h2>1 de octubre<br />al 16 de noviembre</h2>
+                <p>Periodo previsto para las pruebas en ambiente piloto y el proceso de autorización durante 2026.</p>
+                <div className="status-foot">Aportes al Anexo Técnico<br /><strong>Hasta el 21 de septiembre de 2026</strong></div>
               </aside>
             </div>
           </div>
@@ -62,7 +60,7 @@ export default function Home() {
 
         <div className="meta-bar" aria-label="Datos de la publicación">
           <span>NOVEDADES EMIZOR · COMUNICADO A CLIENTES</span>
-          <span>15 SEP 2026 <span className="meta-divider">/</span> VERSIÓN 1.3</span>
+          <span>16 SEP 2026 <span className="meta-divider">/</span> VERSIÓN 1.4</span>
         </div>
 
         <article className="featured-story">
@@ -70,27 +68,31 @@ export default function Home() {
             <div className="section-heading">
               <span className="section-kicker">01 / ESTADO DE LA ADECUACIÓN</span>
               <h2 id="process-title">Avanzamos contigo, paso a paso.</h2>
-              <p className="process-intro">Este es el progreso de EMIZOR frente a los cambios de la Ley N.º 1733.</p>
+              <p className="process-intro">Fechas y estados actualizados con base en la documentación publicada por el SIN.</p>
             </div>
             <ol className="process-line">
-              <li className="step-complete">
-                <span className="step-marker">01</span><span className="stage-label">Completada</span>
-                <h3>Revisión normativa</h3><p>Análisis de la documentación y de los requisitos técnicos del SIN.</p>
-              </li>
               <li className="step-current" aria-current="step">
-                <span className="step-marker">02</span><span className="step-badge">En curso</span>
-                <h3>Desarrollo de ajustes</h3><p>Adaptación del sistema de facturación a los nuevos requerimientos.</p>
+                <span className="step-marker">01</span><span className="step-badge">En curso</span>
+                <span className="stage-date">Aportes hasta el 21 SEP 2026</span>
+                <h3>Revisión normativa</h3><p>El Anexo Técnico continúa en construcción. El SIN recibe sugerencias y aportes hasta el 21 de septiembre; esta fecha no implica necesariamente el cierre del documento.</p>
+              </li>
+              <li className="step-active">
+                <span className="step-marker">02</span><span className="stage-label">En desarrollo</span>
+                <span className="stage-date">Según las versiones del anexo</span>
+                <h3>Adecuación técnica de EMIZOR</h3><p>Trabajamos sobre las especificaciones disponibles y ajustaremos el desarrollo si el SIN publica nuevas versiones.</p>
               </li>
               <li>
-                <span className="step-marker">03</span><span className="stage-label">Pendiente</span>
-                <h3>Pruebas piloto</h3><p>Validación de los cambios en el ambiente de pruebas del SIN.</p>
+                <span className="step-marker">03</span><span className="stage-label">Programada</span>
+                <span className="stage-date">1 OCT — 16 NOV 2026</span>
+                <h3>Pruebas piloto y autorización</h3><p>Periodo definido por el SIN para las pruebas en ambiente piloto y el proceso de autorización.</p>
               </li>
               <li>
                 <span className="step-marker">04</span><span className="stage-label">Pendiente</span>
-                <h3>Adecuación finalizada</h3><p>Cierre satisfactorio de las validaciones y comunicación de la disponibilidad.</p>
+                <span className="stage-date">Fecha por confirmar</span>
+                <h3>Implementación final</h3><p>La disponibilidad y las acciones para los clientes se comunicarán cuando correspondan.</p>
               </li>
             </ol>
-            <p className="process-note">La puesta en operación se comunicará conforme a las disposiciones aplicables del SIN.</p>
+            <p className="process-note">El SIN puede actualizar el Anexo Técnico durante su construcción. EMIZOR actualizará este calendario cuando exista nueva información oficial.</p>
           </section>
 
           <section className="content-grid section client-guidance" id="comunicado">
