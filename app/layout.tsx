@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "EMIZOR | Adecuación a la Ley 1733",
-  description: "Estamos trabajando en la adecuación de nuestro sistema de facturación a los cambios de la Ley 1733.",
+  title: "Novedades EMIZOR | Adecuación a la Ley 1733",
+  description: "Consulta las novedades de EMIZOR y el avance de la adecuación de nuestro sistema de facturación a la Ley 1733.",
   other: {
     "codex-preview": "development",
   },
