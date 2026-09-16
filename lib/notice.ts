@@ -1,9 +1,9 @@
 export const notice = {
-  version: "EMIZOR-1733-2026-09-15-v1.2",
+  version: "EMIZOR-1733-2026-09-15-v1.3",
   title: "EMIZOR está trabajando en la adecuación a la Ley N.º 1733",
   paragraphs: [
     "En EMIZOR estamos trabajando en la adecuación de nuestro sistema de facturación a los cambios de la Ley N.º 1733 y a las especificaciones técnicas del Servicio de Impuestos Nacionales.",
-    "Te informaremos sobre la disponibilidad de los ajustes y las acciones que correspondan a tu empresa. La puesta en operación se comunicará conforme al avance de las validaciones y a las disposiciones aplicables del SIN."
+    "EMIZOR comunicará la disponibilidad de los ajustes y las acciones que correspondan a cada cliente. La puesta en operación se informará conforme al avance de las validaciones y a las disposiciones aplicables del SIN."
   ],
   sources: {
     law: "https://www.impuestos.gob.bo/wp-content/uploads/2026/05/L17332051NCPP.pdf",

@@ -2,12 +2,15 @@ import {
   ArrowDown,
   ArrowLeft,
   ArrowUpRight,
+  Building2,
+  CircleAlert,
   Clock,
   Mail,
   MapPin,
   Newspaper,
   Phone,
   ShieldCheck,
+  UserRoundCheck,
 } from "lucide-react";
 import { ReceiptForm } from "./receipt-form";
 import { notice } from "@/lib/notice";
@@ -59,7 +62,7 @@ export default function Home() {
 
         <div className="meta-bar" aria-label="Datos de la publicación">
           <span>NOVEDADES EMIZOR · COMUNICADO A CLIENTES</span>
-          <span>15 SEP 2026 <span className="meta-divider">/</span> VERSIÓN 1.2</span>
+          <span>15 SEP 2026 <span className="meta-divider">/</span> VERSIÓN 1.3</span>
         </div>
 
         <article className="featured-story">
@@ -92,17 +95,42 @@ export default function Home() {
 
           <section className="content-grid section client-guidance" id="comunicado">
             <div className="section-label">
-              <span>02 / LO QUE NECESITAS SABER</span>
-              <h2>Te mantenemos<br />informado.</h2>
+              <span>02 / ACCIONES Y RESPONSABILIDADES</span>
+              <h2>Qué corresponde<br />a cada parte.</h2>
             </div>
             <div>
               <article className="letter">
                 {notice.paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
-                <div className="next-step">
-                  <h3>¿Qué debes hacer ahora?</h3>
-                  <p>Mantente atento a las próximas comunicaciones de EMIZOR. Publicaremos aquí los avances, fechas y acciones que correspondan para todos nuestros clientes.</p>
-                  <a href="#recepcion">Recibir actualizaciones <ArrowUpRight size={16} /></a>
+                <div className="current-action">
+                  <span>ACCIÓN ACTUAL</span>
+                  <h3>Por el momento, no debes realizar cambios.</h3>
+                  <p>Mantente atento a las próximas comunicaciones de EMIZOR. Informaremos de manera expresa cuándo debas actuar y proporcionaremos las instrucciones, guías y plazos correspondientes.</p>
                 </div>
+                <div className="responsibility-grid" aria-label="Responsabilidades durante la adecuación">
+                  <section>
+                    <Building2 size={23} aria-hidden="true" />
+                    <h3>Responsabilidad de EMIZOR</h3>
+                    <p>Realizar los ajustes que correspondan a nuestra plataforma, validar su funcionamiento y comunicar oportunamente las acciones requeridas a nuestros clientes.</p>
+                  </section>
+                  <section>
+                    <UserRoundCheck size={23} aria-hidden="true" />
+                    <h3>Responsabilidad del cliente</h3>
+                    <p>Cuando EMIZOR comunique que un ajuste es necesario, cada cliente deberá implementar y validar dentro del plazo informado las modificaciones que se encuentren bajo su control.</p>
+                  </section>
+                </div>
+                <div className="responsibility-detail">
+                  <h3>¿Qué puede estar bajo el control del cliente?</h3>
+                  <p>Según corresponda a su servicio: configuraciones, datos, catálogos, integraciones, desarrollos propios y procesos internos. Cada comunicación indicará las acciones aplicables.</p>
+                </div>
+                <div className="compliance-alert">
+                  <CircleAlert size={25} aria-hidden="true" />
+                  <div>
+                    <h3>Importante</h3>
+                    <p>No realizar dentro de los plazos informados las modificaciones que correspondan al cliente podría ocasionar rechazos en la emisión de facturas, inconsistencias en la información tributaria, interrupciones operativas u otras contingencias relacionadas con el cumplimiento de la normativa vigente.</p>
+                    <p>La disponibilidad de la plataforma EMIZOR no sustituye las obligaciones que corresponden al contribuyente ni las validaciones realizadas por el SIN.</p>
+                  </div>
+                </div>
+                <a className="updates-link" href="#recepcion">Recibir actualizaciones <ArrowUpRight size={16} /></a>
                 <div className="signature"><strong>Equipo EMIZOR</strong></div>
               </article>
             </div>
@@ -122,11 +150,23 @@ export default function Home() {
 
           <section id="normativa" className="section content-grid">
             <div className="section-label">
-              <span>04 / FUENTES OFICIALES</span>
-              <h2>Qué cambia.<br />Qué significa.</h2>
-              <p>Referencias oficiales para entender el proceso.</p>
+              <span>04 / INFORMACIÓN OFICIAL</span>
+              <h2>Comunicado<br />y fuentes del SIN.</h2>
+              <p>Información oficial que respalda este proceso de adecuación.</p>
             </div>
             <div className="regulations">
+              <figure className="sin-communique">
+                <img src="/comunicado-sin-ley-1733.png" alt="Comunicado del Servicio de Impuestos Nacionales sobre la preparación y adecuación del Sistema de Facturación a la Ley N.º 1733" width="1254" height="1254" />
+                <figcaption>
+                  <span>COMUNICADO DEL SIN · SEPTIEMBRE DE 2026</span>
+                  <h3>Preparación y adecuación del Sistema de Facturación</h3>
+                  <p>El SIN puso a disposición el Anexo Técnico Ley N.º 1733 para conocer las especificaciones y preparar la implementación. Las pruebas en ambiente piloto y el proceso de autorización están previstos del 1 de octubre al 16 de noviembre de 2026.</p>
+                  <div className="official-links">
+                    <a href={notice.sources.rnd} target="_blank" rel="noopener noreferrer">Consultar RND N.º 102600000034 <ArrowUpRight size={15} /></a>
+                    <a href={notice.sources.annex} target="_blank" rel="noopener noreferrer">Consultar Anexo Técnico <ArrowUpRight size={15} /></a>
+                  </div>
+                </figcaption>
+              </figure>
               <div className="regulation">
                 <span className="number">01</span>
                 <div>
