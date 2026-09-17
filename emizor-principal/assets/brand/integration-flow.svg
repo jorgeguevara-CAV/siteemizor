@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 330" role="img" aria-labelledby="title desc">
+  <title id="title">Integración de un sistema con EMIZOR</title>
+  <desc id="desc">Un sistema empresarial se conecta mediante API REST con EMIZOR para emitir facturas.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#e5f3ff"/><stop offset="1" stop-color="#f5fbff"/></linearGradient>
+    <linearGradient id="blue" x2="1" y2="1"><stop stop-color="#238ee5"/><stop offset="1" stop-color="#1268b9"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="150%" height="170%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#173655" flood-opacity=".14"/></filter>
+  </defs>
+  <rect width="560" height="330" rx="26" fill="url(#bg)"/>
+  <circle cx="492" cy="58" r="82" fill="#d3eafb" opacity=".65"/>
+  <circle cx="73" cy="291" r="105" fill="#d3eafb" opacity=".55"/>
+  <path d="M197 171h145" stroke="#8abce4" stroke-width="5" stroke-linecap="round" stroke-dasharray="9 12"/>
+  <path d="m331 159 15 12-15 12" fill="none" stroke="#4d9ad3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g filter="url(#shadow)">
+    <rect x="45" y="85" width="172" height="173" rx="18" fill="#fff" stroke="#c9e1f3"/>
+    <rect x="60" y="101" width="142" height="91" rx="10" fill="#eef6fd" stroke="#c9e1f3"/>
+    <path d="M84 130h44m-44 21h94m-94 20h69" stroke="#8eb9d9" stroke-width="9" stroke-linecap="round"/>
+    <path d="M101 209h60" stroke="#d6e7f3" stroke-width="5" stroke-linecap="round"/>
+    <text x="131" y="239" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700" fill="#173655">Tu sistema</text>
+    <rect x="343" y="67" width="173" height="191" rx="20" fill="#fff" stroke="#c9e1f3"/>
+    <rect x="359" y="84" width="141" height="117" rx="13" fill="url(#blue)"/>
+    <path d="M389 142h82m-61-24-20 24 20 24m39-48 20 24-20 24" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="429" y="238" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#146bc2">EMIZOR</text>
+  </g>
+  <rect x="225" y="133" width="108" height="33" rx="16.5" fill="#fff" stroke="#b6d8f1"/>
+  <text x="279" y="155" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#146bc2">API REST</text>
+</svg>

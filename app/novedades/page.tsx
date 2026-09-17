@@ -1,42 +1,51 @@
 import {
   ArrowDown,
-  ArrowLeft,
   ArrowUpRight,
   Building2,
   CircleAlert,
   Clock,
   Mail,
   MapPin,
-  Newspaper,
+  Menu,
   Phone,
   UserRoundCheck,
 } from "lucide-react";
-import { ReceiptForm } from "./receipt-form";
+import { ReceiptForm } from "../receipt-form";
 import { notice } from "@/lib/notice";
+
+const mainSiteUrl = "/";
 
 export default function Home() {
   return (
     <>
-      <header className="header header-compact">
-        <div className="brand-lockup">
-          <a className="wordmark" href="https://emizor.com/" aria-label="Ir al sitio principal de EMIZOR">
+      <header className="main-site-header">
+        <div className="main-site-header-inner">
+          <a className="main-site-logo" href={mainSiteUrl} aria-label="EMIZOR, ir al inicio">
             <img src="/emizor-logo-transparent.png" alt="EMIZOR — expertos en facturación" width="2170" height="725" />
           </a>
-          <span className="brand-divider" aria-hidden="true" />
-          <a className="news-title" href="#inicio" aria-label="Ir al inicio de Novedades EMIZOR">
-            <Newspaper size={19} aria-hidden="true" />
-            <span>Novedades</span>
-          </a>
+          <nav className="main-desktop-nav" aria-label="Navegación principal">
+            <a href="/caracteristicas.html">Características</a>
+            <a href="/integraciones.html">Integraciones</a>
+            <a href="/nosotros.html">¿Quiénes somos?</a>
+            <a href="/novedades/" aria-current="page">Novedades</a>
+          </nav>
+          <a className="main-header-cta" href="/contacto.html">Solicita una demostración</a>
+          <details className="main-mobile-menu">
+            <summary>Menú <Menu size={22} aria-hidden="true" /></summary>
+            <nav aria-label="Navegación principal móvil">
+              <a href="/caracteristicas.html">Características</a>
+              <a href="/integraciones.html">Integraciones</a>
+              <a href="/nosotros.html">¿Quiénes somos?</a>
+              <a href="/contacto.html">Contacto</a>
+              <a href="/novedades/" aria-current="page">Novedades</a>
+            </nav>
+          </details>
         </div>
-        <a className="back-to-emizor" href="https://emizor.com/">
-          <ArrowLeft size={16} aria-hidden="true" /> Volver a EMIZOR
-        </a>
       </header>
 
       <main id="inicio">
         <section className="hero" aria-labelledby="featured-title">
           <div className="hero-inner">
-            <div className="eyebrow">NOVEDAD DESTACADA <span>NORMATIVA</span></div>
             <div className="hero-grid">
               <div>
                 <h1 id="featured-title">EMIZOR avanza en la adecuación<br /><em>a la Ley N.º 1733.</em></h1>
@@ -48,46 +57,40 @@ export default function Home() {
                   <a className="hero-secondary" href="#recepcion">Recibir actualizaciones <ArrowUpRight size={16} /></a>
                 </div>
               </div>
-              <aside className="status-card official-calendar" aria-label="Calendario oficial del Servicio de Impuestos Nacionales">
-                <p className="small-title">CALENDARIO OFICIAL DEL SIN</p>
-                <h2>1 de octubre<br />al 16 de noviembre</h2>
-                <p>Periodo previsto para las pruebas en ambiente piloto y el proceso de autorización durante 2026.</p>
-                <div className="status-foot">Aportes al Anexo Técnico<br /><strong>Hasta el 21 de septiembre de 2026</strong></div>
+              <aside className="status-card official-calendar" aria-label="Resumen del estado actual de la adecuación">
+                <p className="small-title">Estado actual</p>
+                <h2>Adecuación en curso</h2>
+                <p>Por el momento, no necesitas realizar cambios. EMIZOR comunicará las acciones cuando correspondan.</p>
+                <div className="status-foot"><strong>Próximo hito</strong><br />Pruebas piloto y autorización: 1 de octubre al 16 de noviembre de 2026.</div>
               </aside>
             </div>
           </div>
         </section>
 
         <div className="meta-bar" aria-label="Datos de la publicación">
-          <span>NOVEDADES EMIZOR · COMUNICADO A CLIENTES</span>
           <span>16 SEP 2026 <span className="meta-divider">/</span> VERSIÓN 1.4</span>
         </div>
 
         <article className="featured-story">
           <section className="section process" id="etapas" aria-labelledby="process-title">
             <div className="section-heading">
-              <span className="section-kicker">01 / ESTADO DE LA ADECUACIÓN</span>
               <h2 id="process-title">Avanzamos contigo, paso a paso.</h2>
               <p className="process-intro">Fechas y estados actualizados con base en la documentación publicada por el SIN.</p>
             </div>
             <ol className="process-line">
-              <li className="step-current" aria-current="step">
-                <span className="step-marker">01</span><span className="step-badge">En curso</span>
+              <li className="step-current" aria-current="step"><span className="step-badge">En curso</span>
                 <span className="stage-date">Aportes hasta el 21 SEP 2026</span>
                 <h3>Revisión normativa</h3><p>El Anexo Técnico continúa en construcción. El SIN recibe sugerencias y aportes hasta el 21 de septiembre; esta fecha no implica necesariamente el cierre del documento.</p>
               </li>
-              <li className="step-active">
-                <span className="step-marker">02</span><span className="stage-label">En desarrollo</span>
+              <li className="step-active"><span className="stage-label">En desarrollo</span>
                 <span className="stage-date">Según las versiones del anexo</span>
                 <h3>Adecuación técnica de EMIZOR</h3><p>Trabajamos sobre las especificaciones disponibles y ajustaremos el desarrollo si el SIN publica nuevas versiones.</p>
               </li>
-              <li>
-                <span className="step-marker">03</span><span className="stage-label">Programada</span>
+              <li><span className="stage-label">Programada</span>
                 <span className="stage-date">1 OCT — 16 NOV 2026</span>
                 <h3>Pruebas piloto y autorización</h3><p>Periodo definido por el SIN para las pruebas en ambiente piloto y el proceso de autorización.</p>
               </li>
-              <li>
-                <span className="step-marker">04</span><span className="stage-label">Pendiente</span>
+              <li><span className="stage-label">Pendiente</span>
                 <span className="stage-date">Fecha por confirmar</span>
                 <h3>Implementación final</h3><p>La disponibilidad y las acciones para los clientes se comunicarán cuando correspondan.</p>
               </li>
@@ -97,14 +100,12 @@ export default function Home() {
 
           <section className="content-grid section client-guidance" id="comunicado">
             <div className="section-label">
-              <span>02 / ACCIONES Y RESPONSABILIDADES</span>
               <h2>Qué corresponde<br />a cada parte.</h2>
             </div>
             <div>
               <article className="letter">
                 {notice.paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
                 <div className="current-action">
-                  <span>ACCIÓN ACTUAL</span>
                   <h3>Por el momento, no debes realizar cambios.</h3>
                   <p>Mantente atento a las próximas comunicaciones de EMIZOR. Informaremos de manera expresa cuándo debas actuar y proporcionaremos las instrucciones, guías y plazos correspondientes.</p>
                 </div>
@@ -141,7 +142,6 @@ export default function Home() {
           <section className="reception-wrap" id="recepcion">
             <div className="section content-grid reception">
               <div className="section-label">
-                <span>03 / SIGUE ESTA ACTUALIZACIÓN</span>
                 <h2>Recibe novedades<br />sobre este proceso.</h2>
                 <p>Déjanos tus datos para recibir avances sobre la adecuación, las pruebas piloto y los próximos pasos.</p>
                 <p className="privacy">Usaremos tus datos para comunicarte novedades sobre la adecuación a la Ley N.º 1733. Puedes solicitar la actualización de tus datos o dejar de recibir estas comunicaciones escribiendo a <a href="mailto:contacto@emizor.com">contacto@emizor.com</a>.</p>
@@ -152,7 +152,6 @@ export default function Home() {
 
           <section id="normativa" className="section content-grid">
             <div className="section-label">
-              <span>04 / INFORMACIÓN OFICIAL</span>
               <h2>Comunicado<br />y fuentes del SIN.</h2>
               <p>Información oficial que respalda este proceso de adecuación.</p>
             </div>
@@ -160,7 +159,6 @@ export default function Home() {
               <figure className="sin-communique">
                 <img src="/comunicado-sin-ley-1733.png" alt="Comunicado del Servicio de Impuestos Nacionales sobre la preparación y adecuación del Sistema de Facturación a la Ley N.º 1733" width="1254" height="1254" />
                 <figcaption>
-                  <span>COMUNICADO DEL SIN · SEPTIEMBRE DE 2026</span>
                   <h3>Preparación y adecuación del Sistema de Facturación</h3>
                   <p>El SIN puso a disposición el Anexo Técnico Ley N.º 1733 para conocer las especificaciones y preparar la implementación. Las pruebas en ambiente piloto y el proceso de autorización están previstos del 1 de octubre al 16 de noviembre de 2026.</p>
                   <div className="official-links">
@@ -170,7 +168,6 @@ export default function Home() {
                 </figcaption>
               </figure>
               <div className="regulation">
-                <span className="number">01</span>
                 <div>
                   <h3>El IVA se muestra por separado</h3>
                   <p>La Disposición Adicional Segunda de la Ley N.º 1733 modifica el artículo 5 de la Ley N.º 843: el precio neto corresponde al valor antes de impuestos y el IVA debe figurar separado en la factura.</p>
@@ -178,7 +175,6 @@ export default function Home() {
                 </div>
               </div>
               <div className="regulation">
-                <span className="number">02</span>
                 <div>
                   <h3>La preparación técnica tiene su propio calendario</h3>
                   <p>La RND N.º 102600000034 establece el período del <strong>1 de octubre al 16 de noviembre de 2026</strong> para la adecuación al anexo técnico, el inicio de pruebas en ambiente piloto y la posterior autorización de sistemas.</p>
@@ -186,7 +182,6 @@ export default function Home() {
                 </div>
               </div>
               <div className="regulation">
-                <span className="number">03</span>
                 <div>
                   <h3>El anexo técnico está en construcción</h3>
                   <p>El portal técnico del SIN contempla cambios en documentos, formatos, datos y validaciones para el IVA Transparente. Las especificaciones pueden actualizarse durante este proceso.</p>
@@ -204,7 +199,7 @@ export default function Home() {
 
       <footer className="contact-footer" id="contacto">
         <div className="footer-heading">
-          <a href="https://emizor.com/" className="wordmark">
+          <a href={mainSiteUrl} className="wordmark" aria-label="Ir al sitio principal de EMIZOR">
             <img src="/emizor-logo-transparent.png" alt="EMIZOR — expertos en facturación" width="2170" height="725" />
           </a>
           <div><h2>¿Tienes alguna consulta?</h2><p>Estamos para ayudarte. Comunícate con nuestro equipo.</p></div>
@@ -229,7 +224,6 @@ export default function Home() {
         </div>
         <div className="footer-bottom">
           <p>EMIZOR · Novedades</p>
-          <a href="#inicio">Volver al inicio <ArrowUpRight size={15} /></a>
         </div>
       </footer>
     </>

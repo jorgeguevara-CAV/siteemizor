@@ -1,3 +1,16 @@
+# Sitios EMIZOR
+
+Este repositorio contiene la principal y su sección secundaria de Novedades en una sola vista previa:
+
+| Sección | Código fuente | Ruta |
+| --- | --- | --- | --- |
+| Principal | [`emizor-principal/`](emizor-principal/) | Presentación de EMIZOR y páginas internas | `/` y páginas `.html` |
+| Novedades | [`app/novedades/`](app/novedades/) | Comunicados y registro de novedades sobre la Ley N.º 1733 | `/novedades/` |
+
+`npm run dev` abre ambas secciones en el mismo origen local, normalmente `http://localhost:5173/`. El script `scripts/sync-principal.mjs` copia los HTML y recursos editables de `emizor-principal/` a `public/` antes de iniciar o compilar. Esa copia se ignora en Git: modifica los archivos de `emizor-principal/` y reinicia la vista previa para ver los cambios. La ruta `/` sirve la portada y `/novedades/` sirve la sección secundaria. Este trabajo solo configura la vista previa y la compilación; no publica el sitio.
+
+---
+
 # vinext-starter
 
 A clean full-stack starter running on [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and Drizzle support.

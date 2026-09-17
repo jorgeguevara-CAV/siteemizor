@@ -47,3 +47,12 @@ next-env.d.ts
 
 # Sites deployment metadata
 /.openai/hosting.json
+
+# Generated copy of the editable principal site for the unified preview.
+/public/index.html
+/public/solucion.html
+/public/caracteristicas.html
+/public/integraciones.html
+/public/nosotros.html
+/public/contacto.html
+/public/assets/
