@@ -385,3 +385,17 @@ section.section{padding-top:60px;padding-bottom:60px}
 
 /* Hero principal: menos espacio vertical antes y después del mensaje. */
 @media(min-width:761px){.hero-grid{padding-top:60px;padding-bottom:64px}}
+
+/* En tabletas estrechas, el menú desplegable evita que la cabecera se desborde. */
+@media(min-width:761px) and (max-width:840px){
+  .header-inner{position:relative;min-height:0;padding-top:13px;padding-bottom:13px;flex-wrap:wrap}
+  .site-header .desktop-nav{display:none}
+  .header-cta{margin-left:auto;font-size:12px;padding:8px}
+  .mobile-menu{display:block;order:3;width:100%;margin-top:3px;border-top:1px solid #ffffff50}
+  .mobile-menu summary{display:flex;align-items:center;justify-content:space-between;min-height:44px;padding:0 12px;margin:8px 0 2px;background:#146bc2;border-radius:5px;list-style:none;cursor:pointer;font-size:15px;font-weight:700}
+  .mobile-menu summary::-webkit-details-marker{display:none}
+  .mobile-menu summary span{font-size:22px;line-height:1}
+  .site-header .mobile-menu nav{display:grid;gap:0;width:100%;margin:0;padding:0 0 9px;overflow:visible;white-space:normal}
+  .site-header .mobile-menu nav a{display:block;padding:12px 3px;border-top:1px solid #ffffff38;font-size:15px}
+  .mobile-menu[open] summary span{transform:rotate(90deg)}
+}

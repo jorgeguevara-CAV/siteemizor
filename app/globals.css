@@ -221,3 +221,16 @@ footer.contact-footer{display:block;padding-top:38px;padding-bottom:22px}.footer
 .sin-communique-copy h3{max-width:580px}
 @media(max-width:1050px){.hero-grid{grid-template-columns:minmax(0,1fr) 340px;gap:34px}}
 @media(max-width:760px){.hero-grid{grid-template-columns:1fr}.status-card.notice-card{max-width:460px}.sin-communique-copy{padding-bottom:22px}}
+
+/* Novedades adopta el menú móvil antes de que la cabecera de tablet se comprima. */
+@media(min-width:761px) and (max-width:900px){
+  .main-site-header-inner{min-height:0;padding-top:13px;padding-bottom:13px;flex-wrap:wrap}
+  .main-desktop-nav{display:none}
+  .main-header-cta{margin-left:auto;font-size:12px;padding:8px}
+  .main-mobile-menu{display:block;order:3;width:100%;margin-top:3px;border-top:1px solid #ffffff50}
+  .main-mobile-menu summary{display:flex;align-items:center;justify-content:space-between;min-height:44px;margin:8px 0 2px;padding:0 12px;border-radius:5px;background:#146bc2;list-style:none;cursor:pointer;font-size:15px;font-weight:700}
+  .main-mobile-menu summary::-webkit-details-marker{display:none}
+  .main-mobile-menu nav{display:grid;gap:0;padding:0 0 9px}
+  .main-mobile-menu nav a{display:block;padding:12px 3px;border-top:1px solid #ffffff38;font-size:15px}
+  .main-mobile-menu nav a[aria-current="page"]{padding-left:10px;border-left:3px solid #fff;background:#ffffff1a;font-weight:800}
+}
