@@ -26,7 +26,7 @@ export default function Home() {
           <nav className="main-desktop-nav" aria-label="Navegación principal">
             <a href="/caracteristicas.html">Características</a>
             <a href="/integraciones.html">Integraciones</a>
-            <a href="/nosotros.html">¿Quiénes somos?</a>
+            <a href="/quienes-somos.html">¿Quiénes somos?</a>
             <a href="/novedades/" aria-current="page">Novedades</a>
           </nav>
           <a className="main-header-cta" href="/contacto.html">Solicita una demostración</a>
@@ -35,7 +35,7 @@ export default function Home() {
             <nav aria-label="Navegación principal móvil">
               <a href="/caracteristicas.html">Características</a>
               <a href="/integraciones.html">Integraciones</a>
-              <a href="/nosotros.html">¿Quiénes somos?</a>
+              <a href="/quienes-somos.html">¿Quiénes somos?</a>
               <a href="/contacto.html">Contacto</a>
               <a href="/novedades/" aria-current="page">Novedades</a>
             </nav>
@@ -57,11 +57,10 @@ export default function Home() {
                   <a className="hero-secondary" href="#recepcion">Recibir actualizaciones <ArrowUpRight size={16} /></a>
                 </div>
               </div>
-              <aside className="status-card official-calendar" aria-label="Resumen del estado actual de la adecuación">
-                <p className="small-title">Estado actual</p>
-                <h2>Adecuación en curso</h2>
-                <p>Por el momento, no necesitas realizar cambios. EMIZOR comunicará las acciones cuando correspondan.</p>
-                <div className="status-foot"><strong>Próximo hito</strong><br />Pruebas piloto y autorización: 1 de octubre al 16 de noviembre de 2026.</div>
+              <aside className="status-card notice-card" aria-label="Comunicado oficial de Impuestos Nacionales sobre la Ley N.º 1733">
+                <a href="/comunicado-sin-ley-1733.jpg" target="_blank" rel="noopener noreferrer" aria-label="Abrir el comunicado oficial de Impuestos Nacionales sobre la Ley N.º 1733">
+                  <img src="/comunicado-sin-ley-1733.jpg" alt="Comunicado de Impuestos Nacionales sobre la preparación y adecuación del Sistema de Facturación a la Ley N.º 1733" width="1254" height="1254" />
+                </a>
               </aside>
             </div>
           </div>
@@ -156,17 +155,16 @@ export default function Home() {
               <p>Información oficial que respalda este proceso de adecuación.</p>
             </div>
             <div className="regulations">
-              <figure className="sin-communique">
-                <img src="/comunicado-sin-ley-1733.png" alt="Comunicado del Servicio de Impuestos Nacionales sobre la preparación y adecuación del Sistema de Facturación a la Ley N.º 1733" width="1254" height="1254" />
-                <figcaption>
+              <div className="sin-communique sin-communique-copy">
+                <div>
                   <h3>Preparación y adecuación del Sistema de Facturación</h3>
                   <p>El SIN puso a disposición el Anexo Técnico Ley N.º 1733 para conocer las especificaciones y preparar la implementación. Las pruebas en ambiente piloto y el proceso de autorización están previstos del 1 de octubre al 16 de noviembre de 2026.</p>
                   <div className="official-links">
                     <a href={notice.sources.rnd} target="_blank" rel="noopener noreferrer">Consultar RND N.º 102600000034 <ArrowUpRight size={15} /></a>
                     <a href={notice.sources.annex} target="_blank" rel="noopener noreferrer">Consultar Anexo Técnico <ArrowUpRight size={15} /></a>
                   </div>
-                </figcaption>
-              </figure>
+                </div>
+              </div>
               <div className="regulation">
                 <div>
                   <h3>El IVA se muestra por separado</h3>
@@ -223,7 +221,11 @@ export default function Home() {
           </section>
         </div>
         <div className="footer-bottom">
-          <p>EMIZOR · Novedades</p>
+          <p>Copyright © 2026 Todos los derechos reservados - Emizor | Facturación Electrónica</p>
+          <div className="footer-bottom-links">
+            <a href="/terms.html">Términos y Condiciones</a>
+            <a href="/politica-privacidad.html">Política de Privacidad emizor.com</a>
+          </div>
         </div>
       </footer>
     </>

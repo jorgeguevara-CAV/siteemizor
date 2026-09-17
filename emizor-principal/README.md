@@ -5,7 +5,7 @@ Fuente editable de la página principal de EMIZOR. La vista previa unificada la 
 ## Estructura
 
 - `index.html`: portada breve y acceso a las páginas internas.
-- `caracteristicas.html`, `integraciones.html`, `nosotros.html`, `contacto.html`: páginas secundarias de la principal.
+- `caracteristicas.html`, `integraciones.html`, `quienes-somos.html`, `contacto.html`: páginas secundarias de la principal.
 - `solucion.html`: redirección de compatibilidad hacia Características.
 - `assets/css/styles.css`: estilos compartidos.
 - `assets/brand/`: identidad visual de EMIZOR.

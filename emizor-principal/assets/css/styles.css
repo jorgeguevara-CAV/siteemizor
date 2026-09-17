@@ -182,10 +182,12 @@ footer.contact-footer{background:#146bc2;color:#fff;padding:38px 0 22px}.contact
 .sin-proof-inner>a{font-size:14px;white-space:nowrap}
 
 /* Segunda captura real junto a las funciones que representa. */
-.feature-screenshot{margin:0 0 35px;border:1px solid #d5e5f0;border-radius:12px;overflow:hidden;background:#f7fbff}
+.feature-screenshot{max-width:960px;margin:0 auto 42px;border:1px solid #d5e5f0;border-radius:12px;overflow:hidden;background:#f7fbff}
 .feature-screenshot>a{display:block;line-height:0}
 .feature-screenshot img{display:block;width:100%;height:auto}
-.feature-screenshot figcaption{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:13px 19px;font-size:14px;line-height:1.5;color:#476571}
+.feature-screenshot figcaption{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:15px 19px;font-size:14px;line-height:1.5;color:#476571}
+.feature-screenshot figcaption strong,.feature-screenshot figcaption span{display:block}
+.feature-screenshot figcaption strong{margin-bottom:2px;color:#173655;font-size:15px}
 .feature-screenshot figcaption a{flex:none}
 .home-paths .path-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .home-paths .path-grid>a{min-height:180px}
@@ -261,6 +263,13 @@ footer.contact-footer{background:#146bc2;color:#fff;padding:38px 0 22px}.contact
 
 /* Quiénes somos: evidencia visible sin añadir afirmaciones no verificadas. */
 .company-proof{background:#edf5fe;border-top:1px solid #d5e5f0;border-bottom:1px solid #d5e5f0}
+.page-hero.company-hero{background:radial-gradient(circle at 82% 20%,#3e9de4 0,#1879d2 45%,#1469be 100%)}
+.page-hero .company-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(310px,410px);gap:68px;align-items:center;padding-top:52px;padding-bottom:56px}
+.company-hero-summary{padding:27px 28px;border:1px solid #8dc5ee;border-radius:12px;background:#0f64b3;box-shadow:0 18px 38px #093f7729}
+.company-hero-summary img{display:block;width:172px;height:45px;object-fit:contain;object-position:left center;margin-bottom:22px}
+.company-hero-summary strong{display:block;font-size:25px;line-height:1.22;letter-spacing:-.7px}
+.company-hero-summary p{margin-top:10px;color:#e9f5ff;font-size:15px;line-height:1.55}
+.company-hero-summary a{display:inline-block;margin-top:18px;color:#fff;font-size:14px;font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .company-proof-inner{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:18px;align-items:center;padding-top:26px;padding-bottom:26px}
 .company-proof-mark{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#146bc2;color:#fff}
 .company-proof-mark svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
@@ -276,6 +285,10 @@ footer.contact-footer{background:#146bc2;color:#fff;padding:38px 0 22px}.contact
 .company-logo-grid img{display:block;width:100%;height:100%;object-fit:contain}
 @media(max-width:900px){.company-clients{grid-template-columns:1fr;gap:27px}.company-clients p{max-width:620px}}
 @media(max-width:760px){
+  .page-hero .company-hero-grid{grid-template-columns:1fr;gap:25px;padding-top:34px;padding-bottom:38px}
+  .company-hero-summary{padding:22px}
+  .company-hero-summary img{width:150px;height:40px;margin-bottom:19px}
+  .company-hero-summary strong{font-size:22px}
   .company-proof-inner{grid-template-columns:38px minmax(0,1fr);gap:11px 13px;padding-top:22px;padding-bottom:23px}
   .company-proof-mark{width:37px;height:37px}.company-proof-mark svg{width:21px;height:21px}
   .company-proof h2{font-size:19px}.company-proof p{font-size:14px}.company-proof a{grid-column:2;white-space:normal;font-size:13px}
@@ -305,3 +318,70 @@ footer.contact-footer{background:#146bc2;color:#fff;padding:38px 0 22px}.contact
   .integration-sin-proof h2{font-size:19px}.integration-sin-proof p{font-size:14px}.integration-sin-proof a{grid-column:2;white-space:normal;font-size:13px}
   .feature-sin-logo{width:122px;height:32px;margin-bottom:16px}
 }
+
+/* Ritmo vertical más compacto en las páginas secundarias. */
+section.section{padding-top:60px;padding-bottom:60px}
+.page-hero .container{padding-top:32px;padding-bottom:40px}
+.feature-details{padding-top:48px;padding-bottom:52px}
+.feature-details-intro{margin-bottom:22px}
+.feature-screenshot{margin-bottom:30px}
+.feature-category{padding-top:18px;margin-top:23px}
+.feature-cta{margin-top:24px;padding:24px 26px}
+.company-intro{gap:52px;padding-top:52px;padding-bottom:54px}
+.company-mission-grid{gap:52px;padding-top:52px;padding-bottom:54px}
+.company-clients{padding-top:48px;padding-bottom:48px}
+.company-contact{padding-top:52px;padding-bottom:54px}
+.page-hero .company-hero-grid{gap:52px;padding-top:42px;padding-bottom:45px}
+.page-hero .integration-hero-grid{gap:42px;padding-top:34px;padding-bottom:37px}
+.integration-intro,.integration-example{gap:56px}
+.integration-card{min-height:215px}
+@media(max-width:760px){
+  section.section{padding-top:40px;padding-bottom:40px}
+  .page-hero .container{padding-top:28px;padding-bottom:32px}
+  .feature-details{padding-top:40px;padding-bottom:44px}
+  .feature-screenshot{margin-bottom:24px}
+  .feature-category{padding-top:16px;margin-top:20px}
+  .feature-cta{margin-top:22px;padding:22px}
+  .company-intro,.company-mission-grid{padding-top:44px;padding-bottom:46px}
+  .company-clients{padding-top:42px;padding-bottom:42px}
+  .company-contact{padding-top:44px;padding-bottom:46px}
+  .page-hero .company-hero-grid{gap:21px;padding-top:30px;padding-bottom:33px}
+  .page-hero .integration-hero-grid{gap:22px;padding-top:26px;padding-bottom:29px}
+  .integration-intro,.integration-example{gap:20px}
+  .integration-card{min-height:0}
+}
+
+/* Retrato institucional: aporta presencia corporativa a Quiénes somos. */
+.company-intro{align-items:center}
+.company-corporate-image{margin:0;overflow:hidden;border-radius:12px;background:#173655;box-shadow:0 18px 38px #1736551f}
+.company-corporate-image img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:58% center}
+.company-intro-copy h2{margin-bottom:18px}
+.company-intro-copy p{font-size:20px;line-height:1.7;color:#3f5969}
+.company-mission-copy h2{margin-bottom:18px}
+.company-mission-art{margin:0;overflow:hidden;border-radius:12px;background:#d8e9f7;box-shadow:0 16px 34px #17365518}
+.company-mission-art img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center}
+@media(max-width:760px){.company-intro-copy h2,.company-mission-copy h2{margin-bottom:13px}.company-intro-copy p{font-size:17px;line-height:1.65}.company-corporate-image img,.company-mission-art img{aspect-ratio:16/9}}
+
+/* Características: las funciones complementarias se muestran solo cuando se necesitan. */
+.feature-group{margin-top:22px;border-top:1px solid #dce5e9}
+.feature-group summary{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:58px;cursor:pointer;color:#173655;font-size:20px;font-weight:700;line-height:1.3;list-style:none}
+.feature-group summary::-webkit-details-marker{display:none}
+.feature-group summary::after{content:"+";display:grid;place-items:center;width:30px;height:30px;flex:none;border:1px solid #b9d8ed;border-radius:50%;color:#146bc2;font-size:23px;font-weight:400;line-height:1}
+.feature-group[open] summary{margin-bottom:18px}
+.feature-group[open] summary::after{content:"−"}
+.feature-group-category{margin-top:27px}
+@media(max-width:760px){.feature-group{margin-top:18px}.feature-group summary{min-height:54px;font-size:18px}.feature-group[open] summary{margin-bottom:15px}}
+
+/* Documentos legales: lectura continua y medida. */
+.legal-content{max-width:910px;padding-top:54px;padding-bottom:62px}
+.legal-content h2{margin:34px 0 13px;font-size:25px;line-height:1.3;letter-spacing:-.5px}
+.legal-content h2:first-child{margin-top:0}
+.legal-content h3{margin:25px 0 11px;font-size:19px;line-height:1.4}
+.legal-content p,.legal-content li{max-width:790px;color:#3f5969;font-size:16px;line-height:1.8}
+.legal-content p+p{margin-top:17px}
+.legal-content ul,.legal-content ol{margin:16px 0 0;padding-left:22px}
+.legal-content li+li{margin-top:7px}
+@media(max-width:760px){.legal-content{padding-top:42px;padding-bottom:46px}.legal-content h2{margin-top:29px;font-size:22px}.legal-content h3{font-size:18px}.legal-content p,.legal-content li{font-size:15px;line-height:1.75}}
+
+/* Hero principal: menos espacio vertical antes y después del mensaje. */
+@media(min-width:761px){.hero-grid{padding-top:60px;padding-bottom:64px}}

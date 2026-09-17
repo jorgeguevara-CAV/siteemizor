@@ -209,3 +209,15 @@ footer.contact-footer{display:block;padding-top:38px;padding-bottom:22px}.footer
   .official-calendar>p:not(.small-title){font-size:14px;line-height:1.5}
   .official-calendar .status-foot,.official-calendar .status-foot strong{font-size:14px}
 }
+
+/* El comunicado oficial ocupa el punto visual principal de Novedades. */
+.hero-grid{grid-template-columns:minmax(0,1fr) 420px;gap:48px}
+.status-card.notice-card{padding:0;background:transparent;border:0;border-radius:0;box-shadow:none}
+.notice-card a{display:block;line-height:0;transition:transform .2s ease}
+.notice-card a:hover{transform:scale(1.015)}
+.notice-card a:focus-visible{outline:3px solid #fff;outline-offset:6px}
+.notice-card img{display:block;width:100%;height:auto}
+.sin-communique-copy{display:block;padding:0 0 28px;border:0;border-radius:0;background:transparent}
+.sin-communique-copy h3{max-width:580px}
+@media(max-width:1050px){.hero-grid{grid-template-columns:minmax(0,1fr) 340px;gap:34px}}
+@media(max-width:760px){.hero-grid{grid-template-columns:1fr}.status-card.notice-card{max-width:460px}.sin-communique-copy{padding-bottom:22px}}
