@@ -29,7 +29,7 @@ export default function Home() {
             <a href="/quienes-somos.html">¿Quiénes somos?</a>
             <a href="/novedades/" aria-current="page">Novedades</a>
           </nav>
-          <a className="main-header-cta" href="/contacto.html">Solicita una demostración</a>
+          <a className="main-header-cta" href="https://web.emizor.com/#/" aria-label="Ingresar a la plataforma EMIZOR">Ingresar</a>
           <details className="main-mobile-menu">
             <summary>Menú <Menu size={22} aria-hidden="true" /></summary>
             <nav aria-label="Navegación principal móvil">
@@ -38,6 +38,7 @@ export default function Home() {
               <a href="/quienes-somos.html">¿Quiénes somos?</a>
               <a href="/contacto.html">Contacto</a>
               <a href="/novedades/" aria-current="page">Novedades</a>
+              <a href="https://web.emizor.com/#/">Ingresar</a>
             </nav>
           </details>
         </div>
