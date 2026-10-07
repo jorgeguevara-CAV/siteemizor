@@ -206,7 +206,7 @@ export default function Home() {
         <div className="footer-contact-grid">
           <section aria-labelledby="contact-channels">
             <h3 id="contact-channels">Contáctanos</h3>
-            <a href="tel:+59172027287"><Phone size={18} aria-hidden="true" /><span><strong>Soporte</strong>+591 72027287</span></a>
+            <a href="tel:+59171391820"><Phone size={18} aria-hidden="true" /><span><strong>Soporte</strong>+591 71391820</span></a>
             <a href="tel:+591800101404"><Phone size={18} aria-hidden="true" /><span><strong>Ventas</strong>+591 800 10 1404</span></a>
             <a href="tel:+59171558908"><Phone size={18} aria-hidden="true" /><span><strong>Ventas</strong>+591 71558908</span></a>
             <a href="mailto:contacto@emizor.com"><Mail size={18} aria-hidden="true" /><span>contacto@emizor.com</span></a>
